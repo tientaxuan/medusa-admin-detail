@@ -1,0 +1,23 @@
+@use '../../scss/' as *;
+
+.note {
+  .note-input {
+    @include flex(center, flex-start);
+    padding: 10px;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    gap: 10px;
+    background-color: #f9fafb;
+    input,
+    input:focus {
+      flex: 1;
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+    }
+    .emoji-picker,
+    .send-btn {
+      cursor: pointer;
+    }
+  }
+}

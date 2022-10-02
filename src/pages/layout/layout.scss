@@ -1,0 +1,13 @@
+@use '../../scss/' as *;
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(1fr, 6);
+  grid-template-rows: 100px min(90vh);
+  gap: 10px;
+  .main {
+    background-color: lightblue;
+    grid-column: 2/6;
+    grid-row: 2/3;
+  }
+}

@@ -1,0 +1,31 @@
+@use './variable.scss';
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: $small-width) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: $medium-width) {
+    @content;
+  }
+}
+
+@mixin big {
+  @media only screen and (max-width: $big-width) {
+    @content;
+  }
+}
+
+@mixin extra {
+  @media only screen and (max-width: $extra-width) {
+    @content;
+  }
+}

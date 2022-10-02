@@ -1,0 +1,73 @@
+@use '../../scss/' as *;
+
+.refund-modal {
+  .refund-modal-title {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .refund-modal-content {
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .refund-amount-wrapper {
+      @include flex(initial, initial);
+      gap: 20px;
+      .refund-currency {
+        p {
+          &:first-child {
+            font-weight: 500;
+            color: gray;
+          }
+        }
+        flex: 3;
+        padding: 15px;
+        border: 0.5px solid lightgray;
+        border-radius: 10px;
+        background-color: #f9fafb;
+      }
+      .refund-amount {
+        p {
+          &:first-child {
+            font-weight: 500;
+            color: gray;
+          }
+        }
+        flex: 7;
+        padding: 15px;
+        border: 0.5px solid lightgray;
+        border-radius: 10px;
+        background-color: #f9fafb;
+      }
+    }
+    .refund-reason {
+      margin-top: 10px;
+      padding: 15px;
+      border: 0.5px solid lightgray;
+      border-radius: 10px;
+      background-color: #f9fafb;
+      .ant-select-selector {
+        padding: 0;
+      }
+      & > p {
+        font-weight: 500;
+        color: gray;
+      }
+    }
+    .refund-note {
+      margin-top: 10px;
+      background-color: #f9fafb;
+      border: 0.5px solid lightgray;
+      border-radius: 10px;
+      padding: 15px;
+      .ant-input {
+        padding: 0;
+      }
+      & > p {
+        font-weight: 500;
+        color: gray;
+      }
+    }
+  }
+}

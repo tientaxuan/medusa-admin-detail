@@ -1,0 +1,51 @@
+@use '../../scss/' as *;
+
+$left-side-step-width: 5%;
+$right-side-step-width: 90%;
+$gap-between-sides: 10px;
+
+.order-step {
+  //   background-color: lightblue;
+  font-size: 12px;
+  font-weight: 300;
+  .step-header {
+    font-weight: 500;
+    @include flex(center, flex-start);
+    gap: $gap-between-sides;
+    &-right {
+      width: $left-side-step-width;
+      min-width: 30px;
+      @include flex(center, center);
+    }
+    &-left {
+      width: $right-side-step-width;
+      .title {
+        @include flex(center, space-between);
+      }
+    }
+  }
+  .step-body {
+    margin-top: 5px;
+    width: 100%;
+    min-height: max-content;
+    @include flex(initial, initial);
+    gap: $gap-between-sides;
+    &-left {
+      width: $left-side-step-width;
+      min-width: 30px;
+      min-height: 100%;
+      @include flex(center, center);
+      .connector {
+        min-height: 70%;
+        border-right: 1px solid black;
+      }
+    }
+    &-right {
+      width: $right-side-step-width;
+      .step-body-content {
+        @include flex(center, space-between);
+        padding-bottom: 60px;
+      }
+    }
+  }
+}

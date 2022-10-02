@@ -1,0 +1,112 @@
+@use '../scss/' as *;
+
+.summary-info {
+  margin-top: 20px;
+  &-container {
+    p.summary-title {
+      font-size: 24px;
+      text-align: start;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    ul.product-list {
+      list-style: none;
+      li.product-item {
+        width: 100%;
+        height: 64px;
+        border-radius: 8px;
+        padding: 5px 8px;
+        margin-bottom: 10px;
+        @include flex(center, space-between);
+        &:hover {
+          background-color: #f9fafb;
+        }
+        * {
+          font-size: 12px;
+          line-height: 20px;
+          color: #111827;
+          font-weight: 300;
+        }
+        cursor: pointer;
+        .image-title-wrapper {
+          width: 45%;
+          @include flex(center, flex-start);
+          gap: 20px;
+          img {
+            width: 35px;
+            height: 45px;
+            border-radius: 5px;
+          }
+        }
+        .price-wrapper {
+          width: 45%;
+          @include flex(center, flex-end);
+          gap: 20px;
+          .price-unit,
+          .quantity,
+          .currency {
+            color: gray;
+          }
+          .quantity-price-wrapper {
+            @include flex(center, center);
+            gap: 10px;
+          }
+        }
+      }
+    }
+    .price-content {
+      @include flex(center, space-between);
+      padding: 5px 8px;
+      .price-title {
+        color: #111827;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 300;
+      }
+      .price-value-content {
+        @include flex(center, flex-end);
+        gap: 20px;
+        width: 20%;
+        .price-value {
+          font-size: 12px;
+          color: #111827;
+          line-height: 20px;
+          font-weight: 300;
+        }
+        .price-unit {
+          font-size: 12px;
+          color: #111827;
+          line-height: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+    .original-total {
+      @include flex(center, space-between);
+      padding: 5px 8px;
+      &-title {
+        font-size: 12px;
+        color: #111827;
+      }
+      &-value {
+        font-size: 24px;
+        color: #111827;
+        font-weight: 600;
+      }
+    }
+    .net-total-content {
+      @include flex(center, space-between);
+      padding: 5px 8px;
+      padding-bottom: 30px;
+      &-title {
+        font-size: 12px;
+        color: #111827;
+      }
+      &-value {
+        font-size: 20px;
+        color: #111827;
+        font-weight: 600;
+      }
+    }
+  }
+}

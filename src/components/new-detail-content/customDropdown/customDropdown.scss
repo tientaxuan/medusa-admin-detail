@@ -1,0 +1,51 @@
+@use '../scss/' as *;
+
+.custom-dropdown {
+  &-container {
+    position: relative;
+    .custom-dropdown-toggle {
+      @include flex(center, center);
+      padding: 5px;
+      border-radius: 4px;
+      &:hover {
+        background-color: #f9fafb;
+      }
+    }
+    .custom-dropdown-content {
+      position: absolute;
+      top: calc(100% + 5px);
+      right: 0;
+      transform: translateX(10%);
+      ul.custom-dropdown-content-inner {
+        min-width: 200px;
+        padding: 8px;
+        border: 0.5px solid lightgray;
+        background-color: white;
+        border-radius: 8px;
+
+        list-style: none;
+        .custom-dropdown-item {
+          @include flex(center, flex-start);
+          gap: 6px;
+          padding: 7px 10px;
+          margin-bottom: 8px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          & > * {
+            display: block;
+            @include flex(center, center);
+          }
+          &-title {
+            font-size: 13px;
+          }
+          &:hover {
+            background-color: #f9fafb;
+
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}

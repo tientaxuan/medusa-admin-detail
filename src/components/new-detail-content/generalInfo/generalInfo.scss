@@ -1,0 +1,92 @@
+@use '../scss/' as *;
+
+.general-info {
+  padding-bottom: 30px;
+  &-container {
+    .order-general-info {
+      width: 100%;
+      @include flex(initial, space-between);
+      .order-general-left {
+        .order-id {
+          cursor: pointer;
+          position: relative;
+          @include flex(center, flex-start);
+          gap: 5px;
+          p {
+            font-size: 24px;
+          }
+          .copy-hover {
+            background-color: white;
+            position: absolute;
+            top: -30px;
+            left: 0;
+            padding: 5px 10px;
+            width: max-content;
+            border: 0.5px solid lightgray;
+            border-radius: 5px;
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+      .order-general-right {
+        @include flex(center, flex-start);
+        gap: 8px;
+        .dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: gray;
+        }
+        .order-status {
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.4px;
+          color: gray;
+        }
+      }
+    }
+    .created-at {
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: gray;
+      }
+    }
+    .user-general-info {
+      margin-top: 50px;
+      @include flex(center, space-between);
+      height: max-content;
+      gap: 15px;
+      &-item {
+        color: gray;
+        & > div {
+          &:first-child {
+            margin-bottom: 10px;
+          }
+          &:last-child {
+            &.user-email-value {
+              img {
+                transform: scale(0.7);
+              }
+              cursor: pointer;
+              position: relative;
+              @include flex(center, flex-start);
+              gap: 5px;
+            }
+
+            font-weight: 300;
+            color: black;
+          }
+        }
+      }
+      &-divider {
+        min-height: 100%;
+        width: 40px;
+        background-color: lightblue;
+      }
+    }
+  }
+}

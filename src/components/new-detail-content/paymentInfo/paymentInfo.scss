@@ -1,0 +1,96 @@
+@use '../scss/' as *;
+
+.payment-info {
+  .payment-info-container {
+    .payment-info-title {
+      @include flex(center, space-between);
+      margin-bottom: 40px;
+      .title {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .payment-status-refund-wrapper {
+        @include flex(center, flex-end);
+        gap: 20px;
+        .payment-status {
+          @include flex(center, center);
+          gap: 10px;
+          .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: lightgreen;
+          }
+          .payment-status-value {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+        .refund-btn {
+          display: block;
+          @include flex(center, center);
+          font-size: 12px;
+          padding: 5px 12px;
+          min-width: 120px;
+          min-height: 30px;
+          background-color: white;
+          &:hover {
+            background-color: #f9fafb;
+          }
+          border: 0.5px solid lightgray;
+          border-radius: 8px;
+        }
+      }
+    }
+    .payment-id-wrapper {
+      margin-bottom: 20px;
+      @include flex(center, space-between);
+      .payment-id-and-created-at {
+        p {
+          &:first-child {
+            margin-bottom: 3px;
+          }
+        }
+      }
+      line-height: 20px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      .payment-paid {
+        @include flex(center, flex-end);
+        gap: 20px;
+      }
+    }
+    .payment-refund {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+      margin-bottom: 20px;
+      @include flex(center, space-between);
+      .payment-refund-title {
+        @include flex(center, flex-start);
+        gap: 5px;
+      }
+      .payment-refund-value {
+        @include flex(center, flex-end);
+        gap: 20px;
+      }
+    }
+    .payment-refund-total {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+      @include flex(center, space-between);
+      & > p {
+        font-weight: 500;
+      }
+      &-value {
+        @include flex(center, flex-end);
+        gap: 20px;
+        p:first-child {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

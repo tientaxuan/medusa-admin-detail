@@ -1,0 +1,7 @@
+@use '../../scss/' as *;
+
+.header-nav {
+  grid-column: 1/6;
+  grid-row: span 1;
+  background-color: lightpink;
+}

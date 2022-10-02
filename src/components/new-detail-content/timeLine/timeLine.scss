@@ -1,0 +1,20 @@
+@use '../scss/' as*;
+
+.time-line {
+  &-container {
+    .time-line-title {
+      @include flex(center, space-between);
+      p {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .more-icon {
+        cursor: pointer;
+      }
+    }
+    .divider {
+      width: 100%;
+      border-bottom: 0.5px solid lightgray;
+    }
+  }
+}

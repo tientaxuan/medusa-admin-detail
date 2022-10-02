@@ -1,0 +1,67 @@
+@use '../scss/' as *;
+
+.customer-info {
+  &-container {
+    .customer-info-title {
+      @include flex(center, space-between);
+      margin-bottom: 40px;
+      p {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .more-icon {
+        cursor: pointer;
+      }
+    }
+    .customer-avatar-wrapper {
+      @include flex(center, flex-start);
+      gap: 20px;
+      .customer-avatar {
+        @include flex(center, center);
+        background-color: lightpink;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        span {
+          display: block;
+          color: white;
+        }
+      }
+      .customer-name {
+        height: 100%;
+        p {
+          &:first-child {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+          &:last-child {
+            font-size: 12px;
+            color: gray;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .customer-detail {
+      margin-top: 20px;
+      @include flex(initial, space-between);
+      .customer-detail-item {
+        .detail-item-title {
+          margin-bottom: 7px;
+          font-size: 12px;
+          color: gray;
+          font-weight: 300;
+        }
+        ul.detail-item-content {
+          list-style: none;
+          li {
+            font-size: 12px;
+            font-weight: 300;
+            margin-bottom: 3px;
+          }
+        }
+      }
+    }
+  }
+}
